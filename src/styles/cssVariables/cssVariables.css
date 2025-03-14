@@ -1,0 +1,38 @@
+:root {
+  /* main-colors */
+
+  --primary: #6e07f3;
+  --secondary: #141c3a;
+  --white: white;
+  --bright-blue: #0068d1;
+  --light-blue: #ebf5ff;
+  --crimson-red: #cc0f35;
+  --light-pink: #feecf0;
+  --dark-green: #11825c;
+  --pale-green: #edfdf7;
+  --mint-green: #5be9b9;
+  --sky-blue: #1a8cff;
+  --medium-blue: #0066cd;
+  --light-gray: #e6e6e6;
+
+  /* light-icon-color */
+  --warm-orange: #ffa726;
+
+  /* dark-icon-color */
+  --charcoal-gray: #37474f;
+
+  /* chip-text-active-color */
+  --royal-blue: #0068d1;
+  /* chip-bg-active-color */
+  --ice-blue: #ebf5ff;
+
+  /* chip-text-hold-on-color */
+  --ruby-red: #cc0f35;
+  /* chip-bg-hold-on-color */
+  --soft-petal-pink: #feecf0;
+
+  /* chip-text-acquired-color */
+  --forest-green: #11825c;
+  /* chip-bg-acquired-color */
+  --fresh-snow: #edfdf7;
+}

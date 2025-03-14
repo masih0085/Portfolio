@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Eurostile';
+  src: url('./assets/fonts/eurostile.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Georgia';
+  src: url('./assets/fonts/georgia.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
