@@ -5,7 +5,10 @@ import { HeroBody } from "./components/HeroBody";
 export function HeroSection() {
   return (
     <HeroWrapper>
-      <HeroBody />
+      <HeroBody
+        text="I design and code beautifully simple things, and I love what I do."
+        title="Designer, Frontend Developer & Mentor"
+      />
       <HeroFoot />
     </HeroWrapper>
   );

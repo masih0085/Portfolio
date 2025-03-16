@@ -1,4 +1,4 @@
-export default function CircleIcon() {
+export  function CircleIcon() {
   return (
     <svg
       xmlnsXlink="http://www.w3.org/1999/xlink"

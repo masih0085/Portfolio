@@ -1,5 +1,5 @@
 import { Box, Stack, styled, Typography } from "@mui/material";
-import CircleIcon from "../icons/CircleIcon ";
+import {CircleIcon} from "../../../components/icons/CircleIcon ";
 import {
   cssMainColors,
   fonts,

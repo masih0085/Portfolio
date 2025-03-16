@@ -7,9 +7,9 @@ import { CollaborationsSection } from "./CollaborationsSection";
 import { MyStartupSection } from "./MyStartupSection";
 import { StartupProjectSection } from "./StartupProjectSection";
 import { TestimonialsSection } from "./TestimonialsSection";
-import { CallToActionSection } from "./CallToActionSection";
+import { CallToActionHomeSection } from "./CallToActionHomeSection";
 
-function Home() {
+function Homepage() {
   return (
     <HomeWrapper as="section">
       <HeroSection />
@@ -20,11 +20,11 @@ function Home() {
       <MyStartupSection />
       <StartupProjectSection />
       <TestimonialsSection />
-      <CallToActionSection />
+      <CallToActionHomeSection />
     </HomeWrapper>
   );
 }
 
 const HomeWrapper = styled(Box)({});
 
-export default Home;
+export default Homepage;

@@ -5,7 +5,7 @@ import SentimentVerySatisfiedOutlinedIcon from "@mui/icons-material/SentimentVer
 import { CallToAction } from "../../components/ui/CallToAction";
 import { cssMainColors } from "../../styles/cssVariables/cssVariables";
 
-export function CallToActionSection() {
+export function CallToActionHomeSection() {
   return (
     <CallToActionSectionWrapper>
       <Container>

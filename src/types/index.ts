@@ -1,5 +1,10 @@
 import { ReactNode } from "react";
 
+export type HeroBodyProps = {
+  title:string
+  text:string
+}
+
 export type CallOutProps = {
   title: string;
   description: string;

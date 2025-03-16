@@ -6,7 +6,7 @@ export function FeedbackCard(props: FeedBackCardProps) {
   const { avatar, description, subTitle, title } = props;
   return (
     <FeedBackCardWrapper>
-      <StyledAvatar src={avatar} />
+      <StyledAvatar src={avatar} alt={title} />
       <Description>{description}</Description>
       <Title variant="h2">{title}</Title>
       <SubTitle variant="subtitle1">{subTitle}</SubTitle>

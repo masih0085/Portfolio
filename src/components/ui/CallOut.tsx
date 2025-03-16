@@ -5,7 +5,7 @@ import { OutlinedPrimaryButton } from "./buttons/OutlinedPrimary";
 import { cssMainColors, fonts } from "../../styles/cssVariables/cssVariables";
 import { CallOutProps } from "../../types";
 
-export function CallOut(props: CallOutProps) {
+export function Callout(props: CallOutProps) {
   const { buttonName, description, icon, title, link } = props;
   return (
     <CallOutWrapper>
@@ -41,4 +41,5 @@ const Description = styled(Typography)({
 
 const StyledOutlinedPrimaryButton = styled(OutlinedPrimaryButton)({
   padding: "25px 40px",
+  marginTop: "32px",
 });

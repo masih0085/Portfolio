@@ -6,8 +6,10 @@ import {
   fonts,
 } from "../../../styles/cssVariables/cssVariables";
 import heroAvatarImage from "../../../assets/images/heroAvatarImage.webp";
+import { HeroBodyProps } from "../../../types";
 
-export function HeroBody() {
+export function HeroBody(props:HeroBodyProps) {
+  const {text,title} = props
   return (
     <HeroBodyWrapper>
       <Container>
@@ -16,9 +18,9 @@ export function HeroBody() {
             size={{ xs: 12, sm: 12, md: 12, lg: 9, xl: 9 }}
             textAlign="center"
           >
-            <HeroTitle>Designer, Frontend Developer & Mentor</HeroTitle>
+            <HeroTitle>{title}</HeroTitle>
             <HeroText>
-              I design and code beautifully simple things, and I love what I do.
+              {text}
             </HeroText>
             <HeroBodyImg src={heroAvatarImage} width={210} />
           </Grid>

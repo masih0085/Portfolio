@@ -2,7 +2,7 @@ import { Box, styled, Grid2 as Grid } from "@mui/material";
 import { Container } from "../../components/ui/Container";
 import { StartupProject } from "./components/StartupProject";
 import { startupProjectSectionData } from "../../data/startupProjectSectionData";
-import { CallOut } from "../../components/ui/CallOut";
+import { Callout } from "../../components/ui/CallOut";
 import MessageOutlinedIcon from "@mui/icons-material/MessageOutlined";
 
 export function StartupProjectSection() {
@@ -25,7 +25,7 @@ export function StartupProjectSection() {
         </StyledBox>
         <Grid container>
           <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
-            <CallOut
+            <Callout
               link="#"
               buttonName="Start a conversation"
               description="I’m always open to discussing product design work or partnership opportunities."
