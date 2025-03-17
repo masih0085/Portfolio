@@ -1,17 +1,56 @@
-import { Box, styled } from "@mui/material";
-import { HeroFoot } from "./components/HeroFoot";
+import { Box, styled, Grid2 as Grid } from "@mui/material";
 import { HeroBody } from "./components/HeroBody";
+import { heroFoot } from "../../assets/images/index";
+import { Container } from "../../components/ui/Container";
 
 export function HeroSection() {
   return (
-    <HeroWrapper>
-      <HeroBody
-        text="I design and code beautifully simple things, and I love what I do."
-        title="Designer, Frontend Developer & Mentor"
-      />
-      <HeroFoot />
+    <HeroWrapper as="section">
+      <StyledBoxHeroBody>
+        <Container>
+          <Grid container justifyContent="center">
+            <Grid
+              size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}
+              textAlign="center"
+            >
+              <HeroBody
+                text="I design and code beautifully simple things, and I love what I do."
+                title="Designer, Frontend Developer & Mentor"
+              />
+            </Grid>
+          </Grid>
+        </Container>
+      </StyledBoxHeroBody>
+      <StyledBoxHeroFoot>
+        <Container>
+          <Grid container justifyContent="center">
+            <Grid
+              size={{ xs: 12, sm: 12, md: 12, lg: 9, xl: 9 }}
+              textAlign="center"
+            >
+              <HeroFootImg src={heroFoot} width={860} />
+            </Grid>
+          </Grid>
+        </Container>
+      </StyledBoxHeroFoot>
     </HeroWrapper>
   );
 }
 
-const HeroWrapper = styled(Box)({});
+const HeroWrapper = styled(Box)({
+  paddingTop: "32px",
+});
+
+const StyledBoxHeroBody = styled(Box)({
+  padding: "48px",
+});
+
+const StyledBoxHeroFoot = styled(Box)({
+  padding: "0 24px",
+});
+
+const HeroFootImg = styled("img")({
+  margin: "0 0 -7.9px 0",
+  maxWidth: "100%",
+  height: "auto",
+});

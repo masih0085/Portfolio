@@ -38,3 +38,5 @@ export { default as jenann } from "./jenann.webp";
 export { default as jonathan } from "./jonathan.webp";
 export { default as erika } from "./erika.webp";
 export { default as arnold } from "./arnold.webp";
+export { default as heroFoot } from "./heroFoot.webp";
+export { default as heroAvatarImage } from "./heroAvatarImage.webp";

@@ -1,6 +1,6 @@
 import { styled } from "@mui/material";
 import { Outlet } from "react-router-dom";
-import { Header } from "../layouts/header/Heard";
+import { Header } from "../layouts/header/Header";
 import { Footer } from "../layouts/footer/Footer";
 
 function RootLayout() {
@@ -21,16 +21,18 @@ const StyledLayout = styled("div")(({ theme }) => ({
   minHeight: "100vh",
   width: "100%",
   background: "#ffffff",
-  [theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("sm")]: {
     width: "100%",
     overflowX: "hidden",
   },
 }));
 
-const MainWrapper = styled("main")(() => ({
+const MainWrapper = styled("main")(({ theme }) => ({
   flex: 1,
-  paddingTop: "60px",
   marginTop: "200px",
+  [theme.breakpoints.down("sm")]: {
+    marginTop: "114px",
+  },
 }));
 
 export default RootLayout;

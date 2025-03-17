@@ -34,7 +34,7 @@ export function MenteeSuccessSection() {
           <Grid container justifyContent="center">
             {menteeSuccessData.map(({ image, alt }) => {
               return (
-                <StyledGridItem size={{ xs: 12, sm: 12, md: 12, lg: 3, xl: 3 }}>
+                <StyledGridItem size={{ xs: 12, sm: 12, md: 12, lg: 3, xl: 3 }} key={alt}>
                   <Image src={image} alt={alt} />
                 </StyledGridItem>
               );
