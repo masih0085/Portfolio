@@ -42,8 +42,9 @@ export function StartupProjectSection() {
 const StartupProjectSectionWrapper = styled(Box)(({ theme }) => ({
   padding: "48px 48px 144px 48px",
   marginTop: "-224px",
-  [theme.breakpoints.down("sm")]: {
+  [theme.breakpoints.down("md")]: {
     padding: "80px 24px 96px 24px",
+    marginTop: "-208px",
   },
 }));
 

@@ -22,7 +22,7 @@ const StyledCard = styled(Card)(({ theme }) => ({
   boxShadow: "0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #E6ECF8",
   borderRadius: "12px",
   padding: "60px 35px",
-  [theme.breakpoints.down("sm")]: {
+  [theme.breakpoints.down("md")]: {
     padding: "40px",
   },
   "& .MuiCardMedia-root": {
@@ -36,7 +36,7 @@ const Description = styled(Typography)(({ theme }) => ({
   color: cssMainColors.secondary,
   textAlign: "center",
   marginBottom: "32px",
-  [theme.breakpoints.down("sm")]: {
+  [theme.breakpoints.down("md")]: {
     fontSize: "16px",
   },
 }));

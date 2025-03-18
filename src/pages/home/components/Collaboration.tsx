@@ -47,7 +47,7 @@ const Title = styled(Typography)(({ theme }) => ({
   color: cssMainColors.secondary,
   fontFamily: fonts.eurostile,
   textAlign: "center",
-  [theme.breakpoints.down('sm')]: {
+  [theme.breakpoints.down('md')]: {
     fontSize: "24px",
   },
 }));

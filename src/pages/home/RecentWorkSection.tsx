@@ -22,7 +22,7 @@ export function RecentWorkSection() {
             {recentWorkData.map((item) => {
               return (
                 <StyledGridItem
-                  size={{ xs: 12, sm: 12, md: 12, lg: 4, xl: 4 }}
+                  size={{ xs: 12, sm: 12, md: 6, lg: 4, xl: 4 }}
                   key={item.alt}
                 >
                   <RecentWork {...item} />
@@ -50,7 +50,7 @@ export function RecentWorkSection() {
 
 const RecentWorkWrapper = styled(Box)(({ theme }) => ({
   padding: "144px 72px",
-  [theme.breakpoints.down("sm")]: {
+  [theme.breakpoints.down("md")]: {
     padding: "80px 24px",
   },
 }));
@@ -62,19 +62,22 @@ const Title = styled(Typography)(({ theme }) => ({
   color: cssMainColors.secondary,
   marginBottom: "24px",
   textAlign: "center",
-  [theme.breakpoints.down("sm")]: {
+  [theme.breakpoints.down("md")]: {
     fontSize: "24px",
   },
 }));
 
-const Description = styled(Typography)({
+const Description = styled(Typography)(({ theme }) => ({
   fontSize: "20px",
   fontWeight: 400,
   fontFamily: fonts.georgia,
   color: cssMainColors.secondary,
   marginBottom: "24px",
   textAlign: "center",
-});
+  [theme.breakpoints.between("sm", "md")]: {
+    fontSize: "18px",
+  },
+}));
 
 const StyledLink = styled(Link)({
   fontSize: "20px",
@@ -87,7 +90,7 @@ const StyledLink = styled(Link)({
 
 const StyledBox = styled(Box)(({ theme }) => ({
   padding: "64px 0",
-  [theme.breakpoints.down("sm")]: {
+  [theme.breakpoints.down("md")]: {
     paddingTop: "32px",
     paddingBottom: "64px",
   },

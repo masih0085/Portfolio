@@ -40,9 +40,14 @@ const StyledStack = styled(Stack)(({ theme }) => ({
   gap: "25px",
   justifyContent: "center",
   marginBottom: "56px",
+  
+  [theme.breakpoints.between("sm", "md")]: {
+    gap: "6px",
+    marginBottom: "32px",
+  },
+
   [theme.breakpoints.down("sm")]: {
     gap: "6px",
     marginBottom: "48px",
-
   },
 }));

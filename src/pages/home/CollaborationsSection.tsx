@@ -13,7 +13,7 @@ export function CollaborationsSection() {
 const CollaborationWrapper = styled(Box)(({ theme }) => ({
   padding: "144px 72px",
   borderTop: "1px solid #E6ECF8",
-  [theme.breakpoints.down("sm")]: {
+  [theme.breakpoints.down("md")]: {
     padding: "80px 24px",
   },
 }));

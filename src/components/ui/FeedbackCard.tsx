@@ -24,7 +24,7 @@ const StyledAvatar = styled(Avatar)(({ theme }) => ({
   width: "96px",
   height: "96px",
   margin: "64px 0",
-  [theme.breakpoints.down('sm')]: {
+  [theme.breakpoints.down('md')]: {
     marginTop: "40px",
     marginBottom: "32px",
   },
@@ -36,7 +36,7 @@ const Description = styled(Typography)(({ theme }) => ({
   color: cssMainColors.secondary,
   maxWidth: "700px",
   margin: "0 auto 40px",
-  [theme.breakpoints.down('sm')]: {
+  [theme.breakpoints.down('md')]: {
     fontSize: "20px",
   },
 }));
@@ -47,7 +47,7 @@ const Title = styled(Typography)(({ theme }) => ({
   fontFamily: fonts.eurostile,
   color: cssMainColors.secondary,
   marginBottom: "24px",
-  [theme.breakpoints.down('sm')]: {
+  [theme.breakpoints.down('md')]: {
     fontSize: "20px",
   },
 }));

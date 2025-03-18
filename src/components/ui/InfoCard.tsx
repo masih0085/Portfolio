@@ -25,7 +25,7 @@ const CardTitle = styled(Typography)(({ theme }) => ({
   fontWeight: 800,
   marginBottom: "24px",
   color: cssMainColors.white,
-  [theme.breakpoints.down("sm")]: {
+  [theme.breakpoints.down("md")]: {
     fontSize: "24px",
   },
 }));

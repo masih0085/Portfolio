@@ -11,7 +11,7 @@ export function Footer() {
   return (
     <FooterWrapper>
       <Container>
-        <Grid container direction="column" alignItems="center">
+        <StyledGridContainer container direction="column" alignItems="center">
           <Grid
             size={{ xs: 12, sm: 12, md: 12, lg: 4, xl: 4 }}
             textAlign="center"
@@ -34,7 +34,7 @@ export function Footer() {
           <Grid size={{ xs: 12, sm: 12, md: 12, lg: 4, xl: 4 }}>
             <CopyRight />
           </Grid>
-        </Grid>
+        </StyledGridContainer>
       </Container>
     </FooterWrapper>
   );
@@ -46,8 +46,14 @@ const FooterWrapper = styled("footer")(({ theme }) => ({
   padding: "64px 24px",
   backgroundColor: cssMainColors.primary,
   color: cssMainColors.white,
-  [theme.breakpoints.down("sm")]: {
+  [theme.breakpoints.down("md")]: {
     padding: "48px 24px 64px",
+  },
+}));
+
+const StyledGridContainer = styled(Grid)(({ theme }) => ({
+  [theme.breakpoints.down("md")]: {
+    gap: "8px",
   },
 }));
 
@@ -60,6 +66,10 @@ const Title = styled(Typography)(({ theme }) => ({
   margin: "32px 56px",
   color: cssMainColors.white,
   fontFamily: fonts.eurostile,
+  [theme.breakpoints.between("sm", "md")]: {
+    margin: "32px 210px",
+    fontSize: "24px",
+  },
   [theme.breakpoints.down("sm")]: {
     margin: "32px 13px",
     fontSize: "24px",

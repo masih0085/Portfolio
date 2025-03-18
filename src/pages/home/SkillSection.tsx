@@ -6,7 +6,7 @@ import { skillCardData } from "../../data/skillCardData";
 import { useBreakpoints } from "../../styles/theme/hooks/useBreakpoints";
 
 export function SkillSection() {
-  const { isMobile } = useBreakpoints();
+  const { isDesktop } = useBreakpoints();
   return (
     <SkillWrapper>
       <Container>
@@ -23,11 +23,11 @@ export function SkillSection() {
                     sx={{
                       padding: 2,
                       borderBottom:
-                        isMobile && (index === 0 || index === 1)
+                        !isDesktop && (index === 0 || index === 1)
                           ? "1px solid #E6ECF8"
                           : "none",
                       borderRight:
-                        !isMobile && (index === 0 || index === 1)
+                        isDesktop && (index === 0 || index === 1)
                           ? "1px solid #E6ECF8"
                           : "none",
                     }}

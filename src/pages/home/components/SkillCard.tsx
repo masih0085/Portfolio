@@ -36,7 +36,7 @@ export function SkillCard(props: SkillCardProps) {
 const CardWrapper = styled(Box)(({ theme }) => ({
   padding: "70px 45px",
   height: "100%",
-  [theme.breakpoints.down("sm")]: {
+  [theme.breakpoints.down("md")]: {
     padding: "50px 30px",
   },
 }));

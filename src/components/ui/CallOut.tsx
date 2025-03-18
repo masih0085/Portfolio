@@ -30,17 +30,20 @@ const Title = styled(Typography)(({ theme }) => ({
   fontWeight: 700,
   color: cssMainColors.secondary,
   marginBottom: "24px",
-  [theme.breakpoints.down("sm")]: {
+  [theme.breakpoints.down("md")]: {
     fontSize: "20px",
   },
 }));
 
-const Description = styled(Typography)({
+const Description = styled(Typography)(({ theme }) => ({
   fontSize: "20px",
   fontFamily: fonts.georgia,
   color: cssMainColors.secondary,
   marginBottom: "24px",
-});
+  [theme.breakpoints.down("md")]: {
+    fontSize: "17px",
+  },
+}));
 
 const StyledOutlinedPrimaryButton = styled(OutlinedPrimaryButton)({
   padding: "25px 40px",

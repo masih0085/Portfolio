@@ -31,7 +31,7 @@ const StyledBox = styled(Box)(({ theme }) => ({
   padding: "56px 20px",
   marginTop: "-150px",
   color: cssMainColors.white,
-  [theme.breakpoints.down("sm")]: {
+  [theme.breakpoints.down("md")]: {
     padding: "56px 32px",
   },
 }));

@@ -29,7 +29,7 @@ const BoiWrapper = styled(Box)(({ theme }) => ({
   padding: "144px 72px 288px",
   color: cssMainColors.white,
   backgroundColor: cssMainColors.primary,
-  [theme.breakpoints.down("sm")]: {
+  [theme.breakpoints.down("md")]: {
     padding: "80px 24px 224px",
   },
 }));

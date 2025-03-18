@@ -8,14 +8,17 @@ import { useBreakpoints } from "../../../styles/theme/hooks/useBreakpoints";
 import { heroAvatarImage } from "../../../assets/images/index";
 
 export function HeroBody(props: HeroBodyProps) {
-  const { isMobile } = useBreakpoints();
+  const { isMobile, isTablet } = useBreakpoints();
   const { text, title } = props;
-  
+
   return (
     <>
       <HeroTitle variant="h1">{title}</HeroTitle>
       <HeroText>{text}</HeroText>
-      <HeroBodyImg src={heroAvatarImage} width={isMobile ? 150 : 210} />
+      <HeroBodyImg
+        src={heroAvatarImage}
+        width={isMobile || isTablet ? 150 : 210}
+      />
     </>
   );
 }
@@ -26,7 +29,14 @@ const HeroTitle = styled(Typography)(({ theme }) => ({
   wordBreak: "break-word",
   marginBottom: "24px",
   color: cssMainColors.secondary,
+
+  [theme.breakpoints.between("sm", "md")]: {
+    // tablet break point
+    fontSize: "32px",
+  },
+
   [theme.breakpoints.down("sm")]: {
+    //mobile break point
     fontSize: "30px",
   },
 }));
@@ -37,7 +47,14 @@ const HeroText = styled(Typography)(({ theme }) => ({
   wordBreak: "break-word",
   marginBottom: "24px",
   fontFamily: fonts.georgia,
+
+  [theme.breakpoints.between("sm", "md")]: {
+    // tablet break point
+    fontSize: "20px",
+  },
+
   [theme.breakpoints.down("sm")]: {
+    //mobile break point
     fontSize: "20px",
   },
 }));

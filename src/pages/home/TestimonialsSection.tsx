@@ -26,7 +26,7 @@ const TestimonialsSectionWrapper = styled(Box)(({ theme }) => ({
   padding: "144px 72px",
   borderTop: "1px solid #E6ECF8",
   color: cssMainColors.secondary,
-  [theme.breakpoints.down('sm')]: {
+  [theme.breakpoints.down("md")]: {
     padding: "80px 24px",
   },
 }));
@@ -37,7 +37,7 @@ const TestimonialsTitle = styled(Typography)(({ theme }) => ({
   fontWeight: 800,
   textAlign: "center",
   marginBottom: "24px",
-  [theme.breakpoints.down('sm')]: {
+  [theme.breakpoints.down("md")]: {
     fontSize: "24px",
   },
 }));

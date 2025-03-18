@@ -45,7 +45,7 @@ const HeroWrapper = styled(Box)({
 
 const StyledBoxHeroBody = styled(Box)(({ theme }) => ({
   padding: "48px",
-  [theme.breakpoints.down("sm")]: {
+  [theme.breakpoints.down("md")]: {
     padding: "48px 24px",
   },
 }));
