@@ -1,5 +1,5 @@
 import { Box, Stack, styled, Typography } from "@mui/material";
-import {CircleIcon} from "../../../components/icons/CircleIcon ";
+import { CircleIcon } from "../../../components/icons/CircleIcon ";
 import {
   cssMainColors,
   fonts,
@@ -33,10 +33,13 @@ export function SkillCard(props: SkillCardProps) {
   );
 }
 
-const CardWrapper = styled(Box)({
+const CardWrapper = styled(Box)(({ theme }) => ({
   padding: "70px 45px",
   height: "100%",
-});
+  [theme.breakpoints.down("sm")]: {
+    padding: "50px 30px",
+  },
+}));
 
 const CardIconWrapper = styled(Box)({
   display: "flex",

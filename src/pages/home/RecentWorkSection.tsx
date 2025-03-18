@@ -25,7 +25,7 @@ export function RecentWorkSection() {
                   size={{ xs: 12, sm: 12, md: 12, lg: 4, xl: 4 }}
                   key={item.alt}
                 >
-                  <RecentWork {...item}/>
+                  <RecentWork {...item} />
                 </StyledGridItem>
               );
             })}
@@ -48,18 +48,24 @@ export function RecentWorkSection() {
   );
 }
 
-const RecentWorkWrapper = styled(Box)({
+const RecentWorkWrapper = styled(Box)(({ theme }) => ({
   padding: "144px 72px",
-});
+  [theme.breakpoints.down("sm")]: {
+    padding: "80px 24px",
+  },
+}));
 
-const Title = styled(Typography)({
+const Title = styled(Typography)(({ theme }) => ({
   fontSize: "32px",
   fontFamily: fonts.eurostile,
   fontWeight: 800,
   color: cssMainColors.secondary,
   marginBottom: "24px",
   textAlign: "center",
-});
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "24px",
+  },
+}));
 
 const Description = styled(Typography)({
   fontSize: "20px",
@@ -79,9 +85,13 @@ const StyledLink = styled(Link)({
   },
 });
 
-const StyledBox = styled(Box)({
+const StyledBox = styled(Box)(({ theme }) => ({
   padding: "64px 0",
-});
+  [theme.breakpoints.down("sm")]: {
+    paddingTop: "32px",
+    paddingBottom: "64px",
+  },
+}));
 
 const StyledGridItem = styled(Grid)({
   padding: "12px",

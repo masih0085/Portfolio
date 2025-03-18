@@ -22,19 +22,25 @@ export function TestimonialsSection() {
   );
 }
 
-const TestimonialsSectionWrapper = styled(Box)({
+const TestimonialsSectionWrapper = styled(Box)(({ theme }) => ({
   padding: "144px 72px",
   borderTop: "1px solid #E6ECF8",
   color: cssMainColors.secondary,
-});
+  [theme.breakpoints.down('sm')]: {
+    padding: "80px 24px",
+  },
+}));
 
-const TestimonialsTitle = styled(Typography)({
+const TestimonialsTitle = styled(Typography)(({ theme }) => ({
   fontFamily: fonts.eurostile,
   fontSize: "32px",
   fontWeight: 800,
   textAlign: "center",
   marginBottom: "24px",
-});
+  [theme.breakpoints.down('sm')]: {
+    fontSize: "24px",
+  },
+}));
 
 const TestimonialsText = styled(Typography)({
   fontFamily: fonts.georgia,

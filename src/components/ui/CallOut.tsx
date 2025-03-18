@@ -24,13 +24,16 @@ const CallOutWrapper = styled(Box)({
   textAlign: "center",
 });
 
-const Title = styled(Typography)({
+const Title = styled(Typography)(({ theme }) => ({
   fontSize: "26px",
   fontFamily: fonts.eurostile,
   fontWeight: 700,
   color: cssMainColors.secondary,
   marginBottom: "24px",
-});
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "20px",
+  },
+}));
 
 const Description = styled(Typography)({
   fontSize: "20px",

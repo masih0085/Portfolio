@@ -1,5 +1,4 @@
-import { Box, styled, Typography } from "@mui/material";
-
+import { styled, Typography } from "@mui/material";
 import {
   cssMainColors,
   fonts,
@@ -11,17 +10,15 @@ import { heroAvatarImage } from "../../../assets/images/index";
 export function HeroBody(props: HeroBodyProps) {
   const { isMobile } = useBreakpoints();
   const { text, title } = props;
+  
   return (
-    <HeroBodyWrapper>
+    <>
       <HeroTitle variant="h1">{title}</HeroTitle>
       <HeroText>{text}</HeroText>
       <HeroBodyImg src={heroAvatarImage} width={isMobile ? 150 : 210} />
-    </HeroBodyWrapper>
+    </>
   );
 }
-
-const HeroBodyWrapper = styled(Box)(({ theme }) => ({
-}));
 
 const HeroTitle = styled(Typography)(({ theme }) => ({
   fontWeight: 800,

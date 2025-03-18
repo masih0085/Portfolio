@@ -28,7 +28,7 @@ export function Collaboration(props: CollaborationProps) {
         <Grid container>
           {images.map(({ alt, image }) => {
             return (
-              <Grid size={{ xs: 12, sm: 12, md: 12, lg: 3, xl: 3 }} key={alt}>
+              <Grid size={{ xs: 6, sm: 6, md: 6, lg: 3, xl: 3 }} key={alt}>
                 <StyledCard>
                   <CardMedia component="img" image={image} alt={alt} />
                 </StyledCard>
@@ -41,13 +41,16 @@ export function Collaboration(props: CollaborationProps) {
   );
 }
 
-const Title = styled(Typography)({
+const Title = styled(Typography)(({ theme }) => ({
   fontSize: "32px",
   fontWeight: 800,
   color: cssMainColors.secondary,
   fontFamily: fonts.eurostile,
   textAlign: "center",
-});
+  [theme.breakpoints.down('sm')]: {
+    fontSize: "24px",
+  },
+}));
 
 const StyledBox = styled(Box)({
   paddingTop: "48px",

@@ -2,7 +2,7 @@ import { Box, styled, Grid2 as Grid } from "@mui/material";
 import { Container } from "../../components/ui/Container";
 import { StartupProject } from "./components/StartupProject";
 import { startupProjectSectionData } from "../../data/startupProjectSectionData";
-import { Callout } from "../../components/ui/CallOut";
+import { Callout } from "../../components/ui/Callout";
 import MessageOutlinedIcon from "@mui/icons-material/MessageOutlined";
 
 export function StartupProjectSection() {
@@ -39,14 +39,20 @@ export function StartupProjectSection() {
   );
 }
 
-const StartupProjectSectionWrapper = styled(Box)({
-  padding: "48px 48px 144px 48px ",
+const StartupProjectSectionWrapper = styled(Box)(({ theme }) => ({
+  padding: "48px 48px 144px 48px",
   marginTop: "-224px",
-});
+  [theme.breakpoints.down("sm")]: {
+    padding: "80px 24px 96px 24px",
+  },
+}));
 
-const StyledBox = styled(Box)({
+const StyledBox = styled(Box)(({ theme }) => ({
   marginBottom: "96px",
-});
+  [theme.breakpoints.down("sm")]: {
+    marginBottom: "64px",
+  },
+}));
 
 const StyledGridItem = styled(Grid)({
   padding: "12px ",

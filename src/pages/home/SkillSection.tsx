@@ -3,8 +3,10 @@ import { Container } from "../../components/ui/Container";
 import { SkillCard } from "./components/SkillCard";
 import { cssMainColors } from "../../styles/cssVariables/cssVariables";
 import { skillCardData } from "../../data/skillCardData";
+import { useBreakpoints } from "../../styles/theme/hooks/useBreakpoints";
 
 export function SkillSection() {
+  const { isMobile } = useBreakpoints();
   return (
     <SkillWrapper>
       <Container>
@@ -19,14 +21,15 @@ export function SkillSection() {
                   <SkillCard
                     {...cardData}
                     sx={{
-                      borderRight:
-                        skillCardData.length - 1 !== index
-                          ? "1px solid #E6ECF8"
-                          : undefined,
+                      padding: 2,
                       borderBottom:
-                        skillCardData.length - 1 !== index
-                          ? "0px solid #E6ECF8"
-                          : undefined,
+                        isMobile && (index === 0 || index === 1)
+                          ? "1px solid #E6ECF8"
+                          : "none",
+                      borderRight:
+                        !isMobile && (index === 0 || index === 1)
+                          ? "1px solid #E6ECF8"
+                          : "none",
                     }}
                   />
                 </Grid>
@@ -41,7 +44,7 @@ export function SkillSection() {
 
 const SkillWrapper = styled(Box)({
   marginTop: "-224px",
-  padding:"80px 24px 18px"
+  padding: "80px 24px 16px",
 });
 
 const StyledBox = styled(Box)({

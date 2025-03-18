@@ -1,5 +1,5 @@
-import { Box, styled, Typography } from '@mui/material';
-import { fonts } from '../../styles/cssVariables/cssVariables';
+import { Box, styled, Typography } from "@mui/material";
+import { cssMainColors, fonts } from "../../styles/cssVariables/cssVariables";
 
 type InfoCardProps = {
   title: string;
@@ -16,18 +16,23 @@ export function InfoCard({ title, text }: InfoCardProps) {
 }
 
 const InfoCardWrapper = styled(Box)({
-  padding: '12px',
+  padding: "12px",
 });
 
-const CardTitle = styled(Typography)({
-  fontSize: '32px',
+const CardTitle = styled(Typography)(({ theme }) => ({
+  fontSize: "32px",
   fontFamily: fonts.eurostile,
   fontWeight: 800,
-  marginBottom: '24px',
-});
+  marginBottom: "24px",
+  color: cssMainColors.white,
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "24px",
+  },
+}));
 
 const CardText = styled(Typography)({
-  fontSize: '20px',
+  fontSize: "20px",
   fontFamily: fonts.georgia,
   fontWeight: 400,
+  color: cssMainColors.white,
 });

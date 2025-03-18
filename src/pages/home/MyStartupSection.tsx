@@ -23,8 +23,11 @@ export function MyStartupSection() {
   );
 }
 
-const MyStartupSectionWrapper = styled(Box)({
+const MyStartupSectionWrapper = styled(Box)(({ theme }) => ({
   backgroundColor: cssMainColors.primary,
   color: cssMainColors.white,
   padding: "144px 72px 224px 72px",
-});
+  [theme.breakpoints.down("sm")]: {
+    padding: "80px 24px 192px 24px",
+  },
+}));

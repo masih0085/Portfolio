@@ -2,8 +2,10 @@ import { Box, styled, Grid2 as Grid } from "@mui/material";
 import { HeroBody } from "./components/HeroBody";
 import { heroFoot } from "../../assets/images/index";
 import { Container } from "../../components/ui/Container";
+import { useBreakpoints } from "../../styles/theme/hooks/useBreakpoints";
 
 export function HeroSection() {
+  const { isMobile } = useBreakpoints();
   return (
     <HeroWrapper as="section">
       <StyledBoxHeroBody>
@@ -28,7 +30,7 @@ export function HeroSection() {
               size={{ xs: 12, sm: 12, md: 12, lg: 9, xl: 9 }}
               textAlign="center"
             >
-              <HeroFootImg src={heroFoot} width={860} />
+              <HeroFootImg src={heroFoot} width={isMobile ? 327 : 860} />
             </Grid>
           </Grid>
         </Container>
@@ -41,16 +43,22 @@ const HeroWrapper = styled(Box)({
   paddingTop: "32px",
 });
 
-const StyledBoxHeroBody = styled(Box)({
+const StyledBoxHeroBody = styled(Box)(({ theme }) => ({
   padding: "48px",
-});
+  [theme.breakpoints.down("sm")]: {
+    padding: "48px 24px",
+  },
+}));
 
 const StyledBoxHeroFoot = styled(Box)({
   padding: "0 24px",
 });
 
-const HeroFootImg = styled("img")({
-  margin: "0 0 -7.9px 0",
+const HeroFootImg = styled("img")(({ theme }) => ({
+  marginBottom: "-7.9px",
   maxWidth: "100%",
   height: "auto",
-});
+  [theme.breakpoints.down("sm")]: {
+    marginBottom: "-6.9px",
+  },
+}));
