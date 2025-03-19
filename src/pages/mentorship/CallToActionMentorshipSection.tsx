@@ -19,7 +19,10 @@ export function CallToActionMentorshipSection() {
   );
 }
 
-const CallToActionSectionWrapper = styled(Box)({
+const CallToActionSectionWrapper = styled(Box)(({ theme }) => ({
   padding: "80px 24px 32px 24px",
   background: cssMainColors.primary,
-});
+  [theme.breakpoints.down("md")]: {
+    marginTop: "48px",
+  },
+}));

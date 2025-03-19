@@ -19,6 +19,7 @@ const StyledButton = styled(OutlinedBaseButton)(() => ({
   color: cssMainColors.white,
   padding: "25px 40px",
   fontFamily: fonts.georgia,
+  whiteSpace: "nowrap",
   "&.MuiButton-outlined:hover ": {
     backgroundColor: cssMainColors.mintGreen,
     color: cssMainColors.secondary,

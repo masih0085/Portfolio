@@ -20,9 +20,12 @@ export function MentoringStyleSection() {
   );
 }
 
-const MentoringStyleSectionWrapper = styled(Box)({
+const MentoringStyleSectionWrapper = styled(Box)(({ theme }) => ({
   padding: "144px 72px 224px 72px",
   textAlign: "center",
   backgroundColor: cssMainColors.primary,
   color: cssMainColors.white,
-});
+  [theme.breakpoints.down("md")]: {
+    padding: "80px 24px 192px 24px",
+  },
+}));

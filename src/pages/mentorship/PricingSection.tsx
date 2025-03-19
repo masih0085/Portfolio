@@ -2,8 +2,8 @@ import { Box, styled, Grid2 as Grid } from "@mui/material";
 import { Container } from "../../components/ui/Container";
 import { PricingCard } from "./components/PriceCard";
 import { pricingData } from "../../data/pricingData";
-import { Callout } from "../../components/ui/CallOut";
-import BackHandOutlinedIcon from '@mui/icons-material/BackHandOutlined';
+import { Callout } from "../../components/ui/Callout";
+import BackHandOutlinedIcon from "@mui/icons-material/BackHandOutlined";
 
 export function PricingSection() {
   return (
@@ -32,10 +32,14 @@ export function PricingSection() {
   );
 }
 
-const PricingSectionWrapper = styled(Box)({
+const PricingSectionWrapper = styled(Box)(({ theme }) => ({
   padding: "80px 24px 144px 24px",
   marginTop: "-224px",
-});
+  [theme.breakpoints.down("md")]: {
+    padding: "80px 24px 96px 24px",
+    marginTop: "-208px",
+  },
+}));
 
 const StyledBox = styled(Box)({
   marginBottom: "96px",

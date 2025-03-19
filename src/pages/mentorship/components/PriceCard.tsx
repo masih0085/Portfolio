@@ -5,7 +5,7 @@ import {
 } from "../../../styles/cssVariables/cssVariables";
 import { CircleIcon } from "../../../components/icons/CircleIcon ";
 import { TitledList } from "./TitledList";
-import ContainedSecondaryButton from "../../../components/ui/buttons/ContainedSecondaryButton";
+import { ContainedSecondaryButton } from "../../../components/ui/buttons/ContainedSecondaryButton";
 import { PricingCardProps } from "../types";
 
 export function PricingCard(props: PricingCardProps) {
@@ -32,14 +32,17 @@ export function PricingCard(props: PricingCardProps) {
   );
 }
 
-const StyledCard = styled(Card)({
+const StyledCard = styled(Card)(({ theme }) => ({
   boxShadow: "0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #E6ECF8;",
   background: cssMainColors.white,
   borderRadius: "12px",
   padding: "60px 35px",
   color: cssMainColors.secondary,
   textAlign: "center",
-});
+  [theme.breakpoints.down("md")]: {
+    padding: "40px 30px",
+  },
+}));
 
 const CardIconWrapper = styled(Box)({
   display: "flex",

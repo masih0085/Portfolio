@@ -22,18 +22,24 @@ export function HappyMenteesSection() {
   );
 }
 
-const HappyMenteesSectionWrapper = styled(Box)({
+const HappyMenteesSectionWrapper = styled(Box)(({ theme }) => ({
   padding: "144px 72px",
   color: cssMainColors.secondary,
   textAlign: "center",
-});
+  [theme.breakpoints.down("md")]: {
+    padding: "80px 24px",
+  },
+}));
 
-const HappyMenteesTitle = styled(Typography)({
+const HappyMenteesTitle = styled(Typography)(({ theme }) => ({
   fontSize: "32px",
   fontWeight: 800,
   fontFamily: fonts.eurostile,
   marginBottom: "24px",
-});
+  [theme.breakpoints.down("md")]: {
+    fontSize: "24px",
+  },
+}));
 
 const HappyMenteesText = styled(Typography)({
   fontSize: "20px",

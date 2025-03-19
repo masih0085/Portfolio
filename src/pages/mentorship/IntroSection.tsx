@@ -21,9 +21,12 @@ export function IntroSection() {
   );
 }
 
-const IntroSectionWrapper = styled(Box)({
+const IntroSectionWrapper = styled(Box)(({ theme }) => ({
   padding: "144px 72px 224px 72px",
   background: cssMainColors.primary,
   textAlign: "center",
   color: cssMainColors.white,
-});
+  [theme.breakpoints.down("md")]: {
+    padding: "80px 24px 192px 24px",
+  },
+}));

@@ -3,7 +3,7 @@ import { BezierIcon } from "../pages/mentorship/icons/BezierIcon";
 import {  NetworkChartIcon} from "../pages/mentorship/icons/NetworkChartIcon";
 import { RocketLaunchIcon } from "../pages/mentorship/icons/RocketLaunchIcon";
 import { OpenDoorIcon } from "../pages/mentorship/icons/OpenDoorIcon";
-import { SpellBookIcon } from "../pages/mentorship/icons/SpellbookIcon";
+import { SpellBookIcon } from "../pages/mentorship/icons/SpellBookIcon";
 
 type BenefitsData = BenefitsCardProps[];
 

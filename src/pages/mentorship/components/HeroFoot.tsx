@@ -14,7 +14,6 @@ const HeroFootWrapper = styled(Box)({
   display: "flex",
   justifyContent: "center",
   marginTop: "80px",
-  marginBottom: "-16px",
 });
 
 const Image = styled("img")({

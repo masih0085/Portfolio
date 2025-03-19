@@ -2,7 +2,7 @@
 import { createTheme, Theme, ThemeOptions } from "@mui/material/styles";
 
 // Consistent styles for both light and dark modes
-const consistentStyles: ThemeOptions = {
+const consistentStyles :ThemeOptions = {
   breakpoints: {
     values: {
       xs: 0,

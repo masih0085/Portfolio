@@ -34,7 +34,10 @@ export function MenteeSuccessSection() {
           <Grid container justifyContent="center">
             {menteeSuccessData.map(({ image, alt }) => {
               return (
-                <StyledGridItem size={{ xs: 12, sm: 12, md: 12, lg: 3, xl: 3 }} key={alt}>
+                <StyledGridItem
+                  size={{ xs: 6, sm: 6, md: 6, lg: 3, xl: 3 }}
+                  key={alt}
+                >
                   <Image src={image} alt={alt} />
                 </StyledGridItem>
               );
@@ -46,18 +49,24 @@ export function MenteeSuccessSection() {
   );
 }
 
-const MenteeSuccessSectionWrapper = styled(Box)({
+const MenteeSuccessSectionWrapper = styled(Box)(({ theme }) => ({
   borderTop: "1px solid #E6ECF8",
   padding: "144px 72px",
   textAlign: "center",
   color: cssMainColors.secondary,
-});
+  [theme.breakpoints.down("md")]: {
+    padding: "80px 24px",
+  },
+}));
 
-const Title = styled(Typography)({
+const Title = styled(Typography)(({ theme }) => ({
   fontFamily: fonts.eurostile,
   fontSize: "32px",
   fontWeight: 800,
-});
+  [theme.breakpoints.down("md")]: {
+    fontSize: "24px",
+  },
+}));
 
 const ImageMenteeMapWrapper = styled(Box)({
   marginTop: "48px",
@@ -69,10 +78,13 @@ const Image = styled("img")({
   height: "auto",
 });
 
-const SubTitle = styled(Typography)({
+const SubTitle = styled(Typography)(({ theme }) => ({
   fontSize: "26px",
   fontWeight: 500,
-});
+  [theme.breakpoints.down("md")]: {
+    fontSize: "20px",
+  },
+}));
 
 const StyledGridItem = styled(Grid)({ padding: "12px" });
 

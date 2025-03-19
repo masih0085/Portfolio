@@ -8,7 +8,7 @@ import {
   fonts,
 } from "../../../styles/cssVariables/cssVariables";
 
-export default function ContainedSecondaryButton(
+export  function ContainedSecondaryButton(
   props: ContainedBaseButtonProps
 ) {
   return <StyledButton {...props} />;
@@ -22,4 +22,5 @@ const StyledButton = styled(ContainedBaseButton)({
   padding: "25px 40px",
   marginTop: "32px",
   borderRadius: "9999px",
+  whiteSpace: "nowrap",
 });

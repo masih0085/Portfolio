@@ -9,8 +9,9 @@ export function useBreakpoints() {
 
   return {
     isMobile: useMediaQuery(theme.breakpoints.down("sm")), // < 600px
-    isTablet: useMediaQuery(theme.breakpoints.between("sm", "md")), // 600px - 899px
-    isDesktop: useMediaQuery(theme.breakpoints.up("md")), // >= 900px
-    isBelowMd: useMediaQuery(theme.breakpoints.down("md")), // < 900px
+    isTablet: useMediaQuery(theme.breakpoints.between("sm", "md")), // 600px - 959px
+    isDesktop: useMediaQuery(theme.breakpoints.up("md")), // >= 960px
+    isBelowMd: useMediaQuery(theme.breakpoints.down("md")), // < 960px
   };
 }
+

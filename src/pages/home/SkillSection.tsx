@@ -7,6 +7,7 @@ import { useBreakpoints } from "../../styles/theme/hooks/useBreakpoints";
 
 export function SkillSection() {
   const { isDesktop } = useBreakpoints();
+  
   return (
     <SkillWrapper>
       <Container>
