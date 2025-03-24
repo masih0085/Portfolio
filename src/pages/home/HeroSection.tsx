@@ -6,6 +6,7 @@ import { useBreakpoints } from "../../styles/theme/hooks/useBreakpoints";
 
 export function HeroSection() {
   const { isMobile } = useBreakpoints();
+
   return (
     <HeroWrapper as="section">
       <StyledBoxHeroBody>

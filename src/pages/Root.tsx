@@ -8,7 +8,7 @@ function RootLayout() {
     <StyledLayout>
       <Header />
       <MainWrapper>
-        <Outlet />
+          <Outlet />
       </MainWrapper>
       <Footer />
     </StyledLayout>

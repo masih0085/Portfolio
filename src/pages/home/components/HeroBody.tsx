@@ -10,7 +10,6 @@ import { heroAvatarImage } from "../../../assets/images/index";
 export function HeroBody(props: HeroBodyProps) {
   const { isMobile, isTablet } = useBreakpoints();
   const { text, title } = props;
-
   return (
     <>
       <HeroTitle variant="h1">{title}</HeroTitle>
