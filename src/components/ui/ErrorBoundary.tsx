@@ -6,6 +6,7 @@ import {
 
 // Fallback UI Component
 function ErrorFallback({ error, resetErrorBoundary }: FallbackProps) {
+  // TODO : i wall create good component for this, this component for test
   return (
     <div role="alert">
       <p>Something went wrong: 😢</p>

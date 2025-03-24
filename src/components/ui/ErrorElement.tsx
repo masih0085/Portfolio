@@ -8,8 +8,6 @@ export function ErrorElement() {
   const error = useRouteError();
   const navigate = useNavigate();
 
-  console.log({error})
-
   // Determine the error type
   let errorMessage = "An unexpected error occurred.";
   let errorTitle = "Oops!";
@@ -26,6 +24,7 @@ export function ErrorElement() {
   }
 
   return (
+    // TODO : i wall create good component for this, this component for test
     <div>
       <h1>{errorTitle}</h1>
       <p>
@@ -39,4 +38,3 @@ export function ErrorElement() {
     </div>
   );
 }
-

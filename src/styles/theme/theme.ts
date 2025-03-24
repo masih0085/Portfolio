@@ -14,6 +14,8 @@ const consistentStyles :ThemeOptions = {
   },
 };
 
+// TODO : i will add dark mode colors , i looking for right colors for it
+
 // Light theme
 export const lightTheme: Theme = createTheme({
   ...consistentStyles, // Apply consistent styles
